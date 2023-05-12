@@ -53,11 +53,11 @@ function menor(){
     let mostrar = '<button onclick="mayor();"> ordenar por mayor precio </button> <button onclick="menor();"> ordenar por menor precio</button> <div class="contenido">';
     for (let i=8;i>=0;i--){
         mostrar += `<div class="tarjeta">
-        <h2>${tvmayorprecio[x][0]} </h2>
-        <img src= "${tvmayorprecio[x][4]}.jpg" alt="tv">
-        <p class="p1">$ ${tvmayorprecio[x][2]}</p> 
-        <p class="p2">${tvmayorprecio[x][3]}</p> 
-        <p class="p3">${tvmayorprecio[x][1]}</p></div>`;
+        <h2>${tvmayorprecio[i][0]} </h2>
+        <img src= "${tvmayorprecio[i][4]}.jpg" alt="tv">
+        <p class="p1">$ ${tvmayorprecio[i][2]}</p> 
+        <p class="p2">${tvmayorprecio[i][3]}</p> 
+        <p class="p3">${tvmayorprecio[i][1]}</p></div>`;
     } 
     mostrar+= '</div>';
     document.getElementById("listado").innerHTML = mostrar;
