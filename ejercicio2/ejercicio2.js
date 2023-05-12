@@ -1,33 +1,43 @@
 "use strict";
-/*Una empresa llamada Texit se presenta en la consultoría y plantea
-confeccionar una página para su sitio web de la empresa, y solicita
-que la misma tenga un botón que diga cargar producto, y cada vez
-que se le haga clic, podrá cargarse un producto, también se pide un
-botón que diga ver productos para poder ver los productos cargados.
-El usuario podrá cargar la siguiente información:
-a. Código del producto.
-b. Nombre del producto.
-c. Categoría del producto.
-d. Precio del producto.
-e. Descripción del producto.*/
-
 
 let productos = [];
-let codigo =0, nombre='', categoria='', precio=0, descripcion='';
+const cargarProducto = () => {
+    const codigo = document.getElementById('codigo');
+    const nombre = document.getElementById('nombre').Value;
+    const categoria = document.getElementById('categoria').Value;
+    const precio = document.getElementById('precio').Value;
+    const descripcion = document.getElementById('descripcion').Value;
 
-const mostrarProductos = () => {
+    const producto = {
+        codigo: codigo,
+        nombre: nombre,
+        categoria: categoria, 
+        precio: precio,
+        descripcion: descripcion
+    };
 
-    codigo = document.getElementById ('codigoProducto').value;
-    nombre = document.getElementById ('nombreProducto').value;
-    categoria = document.getElementById ('categoriaProducto').value;
-    precio = document.getElementById ('precioProducto').value;
-    descripcion = document.getElementById ('descripcionProducto').value;
+    productos.push(producto);
 
-    document.getElementById('mostrarProductos').innerHTML = (`<ul>
-    <li> Codigo del producto: ${codigo} </li>
-    <li> Nombre del producto: ${nombre} </li>
-    <li> Categoria del producto: ${categoria} </li>
-    <li> Precio del producto: ${precio} </li>
-    <li> Descripcion del producto: ${descripcion} </li> </ul>`)
+    document.getElementById('codigo').value = "";
+    document.getElementById('nombre').value = "";
+    document.getElementById('categoria').value = "";
+    document.getElementById('precio').value = "";
+    document.getElementById('descripcion').value = "";
 
 }
+
+    function verProductos() {
+        let tabla = "<table><tr><th>Código</th><th>Nombre</th><th>Categoria</th><th>Precio</th><th>Descripcion</th></tr>";
+        for (let i = 0; i < productos.length; i++){
+            tabla += "<tr>";
+            tabla += "<td>" + productos[i].codigo + "</td>";
+            tabla += "<td>" + productos[i].nombre + "</td>";
+            tabla += "<td>" + productos[i].categoria + "</td>";
+            tabla += "<td>" + productos[i].precio + "</td>";
+            tabla += "<td>" + productos[i].descripcion + "</td>";
+            tabla += "</tr>";
+        }
+
+        tabla += "</table>";
+        document.getElementById("productos").innerHTML = tabla;
+    }

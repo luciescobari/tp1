@@ -1,33 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texit - Ejercicio 2</title>
-    <source src="ejercicio2.js">
-</head>
+    <title>TP1 Luciana Escobari / Nicolas Guaragna Ej. 2</title>
+    <script src="ejercicio2.js">
+        <style>
+            *{
+                margin: 10px;
+            }    
+            
+        
+            
+
+
+        </style>
+
+</head> 
+
 <body>
+    <h1>Texit</h1>
 
-    <h1> Texit </h1>
+    <form>
 
-    <form method="post" action="#">
-        <label> Código del producto: </label>
-        <input id="codigoProducto" type="number" maxlength="4" required> <br>
-        <label> Nombre del producto: </label>
-        <input id="nombreProducto" type="text" maxlength="45" required> <br>
-        <label> Categoría del producto: </label>
-        <input id="categoriaProducto" type="text" maxlength="2" required> <br>
-        <label> Precio del producto: </label>
-        <input id="precioProducto" type="number" maxlength="8" required> <br>
-        <label> Descripción del producto: </label>
-        <input id="descripcionProducto" type="text" maxlength="50" required> <br>
+        <label for="codigo"> Código:</label>
+        <input id="codigo" type="number" maxlength="4" required>  
 
-        <input type="submit" value="Enviar datos" onclick="enviar()">
+        <label for="nombre"> Nombre:</label>
+        <input id="nombre" type="text" maxlength="45" required>
+
+        <label for="categoria"> Categoría:</label>
+        <input id="categoria" type="text" maxlength="2" required>
+
+        <label for="precio"> Precio:</label>
+        <input id="precio" type="number" maxlength="8" required>
+
+        <label for="descripción"> Descripción:</label>
+        <textarea  id="descripcion" maxlength="60" required></textarea>
+
+        <button type="button" onclick="cargarProducto()">Cargar producto</button>
+
     </form>
 
-    <button onclick="mostrarProductos()"> Ver productos </button>
-    <ul id="lista-productos"></ul>
+    <button type="button" onclick="verProductos()"> Ver productos </button>
+    <div id="productos">
+
+    </div>
     
 </body>
 </html>
