@@ -28,8 +28,8 @@ function info(){
         <h2>${tv[x][0]} </h2>
         <img src= "${tv[x][4]}.jpg" alt="tv">
         <p class="p1">$ ${tv[x][2]}</p> 
-        <p class="p2">$ ${tv[x][3]}</p> 
-        <p class="p3">$ ${tv[x][1]}</p></div>`;
+        <p class="p2">${tv[x][3]}</p> 
+        <p class="p3">${tv[x][1]}</p></div>`;
     } 
     mostrar+= '</div>';
     document.getElementById("listado").innerHTML = mostrar;
@@ -42,8 +42,8 @@ function mayor(){
         <h2>${tvmayorprecio[x][0]} </h2>
         <img src= "${tvmayorprecio[x][4]}.jpg" alt="tv">
         <p class="p1">$ ${tvmayorprecio[x][2]}</p> 
-        <p class="p2">$ ${tvmayorprecio[x][3]}</p> 
-        <p class="p3">$ ${tvmayorprecio[x][1]}</p></div>`;
+        <p class="p2">${tvmayorprecio[x][3]}</p> 
+        <p class="p3">${tvmayorprecio[x][1]}</p></div>`;
     } 
     mostrar+= '</div>';
     document.getElementById("listado").innerHTML = mostrar;
@@ -56,8 +56,8 @@ function menor(){
         <h2>${tvmayorprecio[x][0]} </h2>
         <img src= "${tvmayorprecio[x][4]}.jpg" alt="tv">
         <p class="p1">$ ${tvmayorprecio[x][2]}</p> 
-        <p class="p2">$ ${tvmayorprecio[x][3]}</p> 
-        <p class="p3">$ ${tvmayorprecio[x][1]}</p></div>`;
+        <p class="p2">${tvmayorprecio[x][3]}</p> 
+        <p class="p3">${tvmayorprecio[x][1]}</p></div>`;
     } 
     mostrar+= '</div>';
     document.getElementById("listado").innerHTML = mostrar;
