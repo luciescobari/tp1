@@ -23,7 +23,7 @@ const mostrarProductos = () => {
     precio = document.getElementById ('precioProducto').value;
     descripcion = document.getElementById ('descripcionProducto').value;
 
-    document.getElementById('mostrarProducto').innerHTML = (`<ul>
+    document.getElementById('mostrarProductos').innerHTML = (`<ul>
     <li> Codigo del producto: ${codigo} </li>
     <li> Nombre del producto: ${nombre} </li>
     <li> Categoria del producto: ${categoria} </li>
