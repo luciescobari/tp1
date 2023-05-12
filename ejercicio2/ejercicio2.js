@@ -2,7 +2,7 @@
 
 let productos = [];
 const cargarProducto = () => {
-    const codigo = document.getElementById('codigo');
+    const codigo = document.getElementById('codigo').value;
     const nombre = document.getElementById('nombre').Value;
     const categoria = document.getElementById('categoria').Value;
     const precio = document.getElementById('precio').Value;
