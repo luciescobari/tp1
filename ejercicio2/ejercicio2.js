@@ -3,10 +3,10 @@
 let productos = [];
 const cargarProducto = () => {
     const codigo = document.getElementById('codigo').value;
-    const nombre = document.getElementById('nombre').Value;
-    const categoria = document.getElementById('categoria').Value;
-    const precio = document.getElementById('precio').Value;
-    const descripcion = document.getElementById('descripcion').Value;
+    const nombre = document.getElementById('nombre').value;
+    const categoria = document.getElementById('categoria').value;
+    const precio = parsefloat(document.getElementById('precio').value);
+    const descripcion = document.getElementById('descripcion').value;
 
     const producto = {
         codigo: codigo,
